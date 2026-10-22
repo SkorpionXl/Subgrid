@@ -55,4 +55,4 @@ Einzeln: `node build.mjs` erzeugt `app/web/` (für die .exe), `dist/SubGrid-Lite
 
 ## Release
 
-Tag pushen (`git tag v2.2.0 && git push --tags`) – die Action baut, testet und hängt die Dateien an das Release.
+Auf GitHub ein Release veröffentlichen (Releases → Draft a new release → Tag z. B. `v2.2.0` → Publish) – die Action baut, testet und hängt die Dateien automatisch an.
