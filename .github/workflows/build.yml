@@ -73,7 +73,10 @@ jobs:
           New-Item -ItemType Directory -Force dist | Out-Null
           Copy-Item build/SubGrid-lite.exe dist/SubGrid-Lite.exe
           Push-Location installer
-          makensis -V2 "-DVERSION=${{ steps.v.outputs.version }}" "-DNUMVER=${{ steps.v.outputs.numver }}" "-DEXE=../build/SubGrid-studio.exe" "-DOUT=../dist/SubGrid-Studio-Setup.exe" subgrid-studio.nsi
+          $exe = (Resolve-Path ../build/SubGrid-studio.exe).Path
+          $out = Join-Path (Resolve-Path ../dist).Path 'SubGrid-Studio-Setup.exe'
+          makensis -V2 "-DVERSION=${{ steps.v.outputs.version }}" "-DNUMVER=${{ steps.v.outputs.numver }}" "-DEXE=$exe" "-DOUT=$out" subgrid-studio.nsi
+          if ($LASTEXITCODE -ne 0) { exit 1 }
           Pop-Location
 
       - uses: actions/upload-artifact@v4
