@@ -1,0 +1,9 @@
+node_modules/
+build/
+dist/
+app/web/
+app/*.syso
+app/*.exe
+test/shots/
+*.log
+app/sgtest

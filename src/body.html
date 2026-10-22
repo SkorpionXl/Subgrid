@@ -1,0 +1,326 @@
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-fit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
+    <symbol id="i-undo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"><path d="M9 14 4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-4"/></symbol>
+    <symbol id="i-redo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"><path d="m15 14 5-5-5-5"/><path d="M20 9H9a5 5 0 0 0 0 10h4"/></symbol>
+    <symbol id="i-rot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></symbol>
+    <symbol id="i-pol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M5 8h6M8 5v6M13 17h6"/><path d="M19 4 5 20" opacity=".5"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="miter"><rect x="5" y="11" width="14" height="9"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-dup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="miter"><rect x="8" y="8" width="12" height="12"/><path d="M16 8V4H4v12h4"/></symbol>
+    <symbol id="i-del" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></symbol>
+    <symbol id="i-zone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-dasharray="3 2.5"><path d="M12 12 4 4a11.3 11.3 0 0 1 16 0z"/><rect x="7" y="15" width="10" height="5"/></symbol>
+    <symbol id="i-cont" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 18c4-9 14-9 18 0"/><path d="M6.5 18c3-5.5 8-5.5 11 0"/><path d="M10 18c1-2 3-2 4 0"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="miter"><path d="M14 3H5v18h14V8z"/><path d="M14 3v5h5"/></symbol>
+    <symbol id="i-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="miter"><path d="M3 6h6l2 2h10v11H3z"/></symbol>
+    <symbol id="i-save" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="miter"><rect x="8" y="8" width="12" height="12"/><path d="M4 16V4h12"/></symbol>
+    <symbol id="i-img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="miter"><rect x="3" y="5" width="18" height="14"/><rect x="7.5" y="8.5" width="3" height="3"/><path d="m21 16-5-5-9 8"/></symbol>
+    <symbol id="i-new" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M14 3H5v18h14V8l-5-5z"/><path d="M12 11v6M9 14h6"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="miter"><rect x="3" y="7" width="18" height="11"/><path d="M7 11h1M11 11h1M15 11h2M7 14.5h10"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l12-7z"/></symbol>
+    <symbol id="i-stop" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="6" width="12" height="12"/></symbol>
+    <symbol id="t-select" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="miter"><path d="M5 3v16l4.5-4.2L12.5 21l2.6-1.2-3-6.1H18z"/></symbol>
+    <symbol id="t-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="6" y="5" width="12" height="15"/><path d="M5 5h14" stroke-width="3"/><path d="M12 9v6M9 12h6"/></symbol>
+    <symbol id="t-rect" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="6" width="16" height="12"/></symbol>
+    <symbol id="t-poly" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="miter"><path d="M4 8 11 4l9 5-3 11H6z"/></symbol>
+    <symbol id="t-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8"/><path d="M12 12h8" stroke-dasharray="2 2"/></symbol>
+    <symbol id="t-fan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="miter"><path d="M12 20 4 7a14 14 0 0 1 16 0z"/></symbol>
+    <symbol id="t-brush" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="miter"><path d="M14 4l6 6-8 8-6-6z"/><path d="M6 12l-2 8 8-2"/></symbol>
+    <symbol id="t-eraser" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="miter"><path d="M3 15 13 5l6 6-8 8H7z"/><path d="M9 9l6 6M11 19h10"/></symbol>
+    <symbol id="t-delete" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="4" width="16" height="16" stroke-dasharray="3 2"/><path d="M8 8l8 8M16 8l-8 8"/></symbol>
+    <symbol id="t-wall" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="miter"><path d="M4 20V5h16v8" stroke-width="3"/><path d="M8 9h8M8 13h4" opacity=".55"/></symbol>
+    <symbol id="t-measure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="miter"><path d="M3 15 15 3l6 6L9 21z"/><path d="M7 11l2 2M10 8l2 2M13 5l2 2"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M5 12h14"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="miter"><rect x="5" y="11" width="14" height="9"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-dice" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="miter"><rect x="4" y="4" width="16" height="16"/><path d="M8.5 8.5h.01M15.5 15.5h.01M12 12h.01M15.5 8.5h.01M8.5 15.5h.01" stroke-width="3" stroke-linecap="square"/></symbol>
+  </defs>
+</svg>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="SubGrid 2">
+    <svg width="32" height="32" viewBox="0 0 34 34" aria-hidden="true">
+      <rect x="0.5" y="0.5" width="33" height="33" fill="#141619" stroke="#3a3f47"/>
+      <g stroke-width="0.8">
+        <rect x="6" y="6" width="6.5" height="6.5" fill="rgba(232,119,34,.10)" stroke="rgba(232,119,34,.35)"/><rect x="13.75" y="6" width="6.5" height="6.5" fill="rgba(232,119,34,.22)" stroke="rgba(232,119,34,.6)"/><rect x="21.5" y="6" width="6.5" height="6.5" fill="rgba(232,119,34,.10)" stroke="rgba(232,119,34,.35)"/>
+        <rect x="6" y="13.75" width="6.5" height="6.5" fill="rgba(74,158,221,.12)" stroke="rgba(74,158,221,.45)"/><rect x="21.5" y="13.75" width="6.5" height="6.5" fill="rgba(74,158,221,.12)" stroke="rgba(74,158,221,.45)"/>
+        <rect x="6" y="21.5" width="6.5" height="6.5" fill="rgba(74,158,221,.06)" stroke="rgba(74,158,221,.25)"/><rect x="13.75" y="21.5" width="6.5" height="6.5" fill="rgba(74,158,221,.1)" stroke="rgba(74,158,221,.35)"/><rect x="21.5" y="21.5" width="6.5" height="6.5" fill="rgba(74,158,221,.06)" stroke="rgba(74,158,221,.25)"/>
+      </g>
+      <rect x="14.5" y="14.5" width="5" height="5" fill="#e87722"/><rect x="12" y="12" width="10" height="10" fill="none" stroke="rgba(232,119,34,.55)"/>
+    </svg>
+    <span><span class="brand-name"><b>SUB</b>GRID<span class="brand-ver" id="brand-ed">STUDIO</span></span><span class="brand-tag">Array Designer</span></span>
+  </a>
+  <nav class="nav" role="tablist" aria-label="Bereiche">
+    <button role="tab" id="nav-sim" aria-selected="true" data-page="sim">Simulation</button>
+    <button role="tab" id="nav-calc" aria-selected="false" data-page="calc">Rechner</button>
+    <button role="tab" id="nav-know" aria-selected="false" data-page="know">Wissen</button>
+  </nav>
+  <div class="top-actions">
+    <button class="btn icon ghost" id="b-undo" title="Rückgängig (Strg+Z)" aria-label="Rückgängig"><svg><use href="#i-undo"/></svg></button>
+    <button class="btn icon ghost" id="b-redo" title="Wiederholen (Strg+Y)" aria-label="Wiederholen"><svg><use href="#i-redo"/></svg></button>
+    <button class="btn icon ghost hide-s" id="b-keys" title="Maus &amp; Tasten" aria-label="Maus und Tasten"><svg><use href="#i-key"/></svg></button>
+    <div class="menu">
+      <button class="btn" id="b-file" aria-haspopup="true" aria-expanded="false"><svg><use href="#i-file"/></svg>Datei</button>
+      <div class="menu-pop" id="m-file" hidden>
+        <button data-act="new"><svg><use href="#i-new"/></svg><span>Neu<small>Boxen leeren, Zonen bleiben</small></span></button>
+        <button data-act="open"><svg><use href="#i-open"/></svg><span>Öffnen …<small>SubGrid-Projekt oder Subarray-JSON · Strg+O</small></span></button>
+        <button data-act="save"><svg><use href="#i-save"/></svg><span>Projekt speichern (.subgrid)<small>alles inkl. Wände und Hallenplan · Strg+S</small></span></button>
+        <button data-act="subarray"><svg><use href="#i-save"/></svg><span>Export für Subarray (.json)<small>für das Python-Programm lesbar</small></span></button>
+        <hr>
+        <button data-act="csv"><svg><use href="#i-save"/></svg><span>Export CSV<small>Kanal, Position, Delay, Gain, Polarität</small></span></button>
+        <button data-act="copy"><svg><use href="#i-copy"/></svg><span>DSP-Liste kopieren<small>Text für Zwischenablage</small></span></button>
+        <button data-act="png"><svg><use href="#i-img"/></svg><span>Draufsicht als PNG</span></button>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="page" id="page-sim">
+  <div class="envbar" id="envbar">
+    <label class="env">Temp <input type="number" id="s-temp" step="1" min="-20" max="45"> °C</label>
+    <label class="env">Feuchte <input type="number" id="s-rh" step="5" min="0" max="100"> %</label>
+    <span class="env env-c" id="s-c">c = 343,8 m/s</span>
+    <span class="env"><span>Band</span> <input type="number" id="s-flo" step="1" min="15" max="200" aria-label="Band von"> <span class="sep">–</span> <input type="number" id="s-fhi" step="1" min="20" max="250" aria-label="Band bis"> Hz</span>
+    <span class="env"><span>Box B×T</span> <input type="number" id="s-bw" step="0.05" min="0.2" max="2" aria-label="Boxbreite"> <span class="sep">×</span> <input type="number" id="s-bd" step="0.05" min="0.2" max="2" aria-label="Boxtiefe"> m</span>
+    <label class="env">Box-SPL <input type="number" id="s-spl" step="1" min="90" max="160"> dB</label>
+  </div>
+
+  <div class="sim">
+    <section class="pane left" aria-label="Werkzeuge">
+      <div class="pane-hd"><div class="seg full" role="group" aria-label="Werkzeugbereich">
+        <button aria-pressed="true" data-left="live">Optimierer</button>
+        <button aria-pressed="false" data-left="zones">Zonen</button>
+        <button aria-pressed="false" data-left="tpl">Vorlagen</button>
+      </div></div>
+
+      <div class="pane-bd" id="left-live">
+        <div class="ad-sec">
+          <h3>Zonen</h3>
+          <div id="lv-zones"></div>
+        </div>
+        <div class="ad-sec">
+          <h3>Material</h3>
+          <div class="mini-f">
+            <label>Boxen<input type="number" id="g-boxes" min="1" max="32" step="1"></label>
+            <label>DSP-Kanäle<input type="number" id="g-channels" min="1" max="16" step="1"></label>
+            <label>max. Stapel<input type="number" id="g-maxStack" min="1" max="4" step="1"></label>
+          </div>
+          <label class="lbl">DSP / Amp
+            <select id="g-dsp"><option value="full">Delay + Polarität + Gain</option><option value="pol">nur Polarität + Gain</option><option value="none">kein DSP (alles parallel)</option></select></label>
+        </div>
+        <div class="ad-sec">
+          <h3>Ziel</h3>
+          <div class="seg full grid2" id="g-priority" role="group" aria-label="Priorität">
+            <button data-v="balanced">Ausgewogen</button><button data-v="rear">Bühne leise</button><button data-v="even">Gleichmäßig</button><button data-v="level">Pegel</button>
+          </div>
+          <div class="mini-f two">
+            <label title="Mittlerer Pegel in der Ruhezone relativ zum Publikum">Ruhezone Ziel (dB)<input type="number" id="g-quietTarget" min="-40" max="0" step="1"></label>
+            <label title="Mittlerer Pegel auf der Bühne relativ zum Publikum">Bühne Ziel (dB)<input type="number" id="g-stageTarget" min="-40" max="0" step="1"></label>
+          </div>
+          <label class="switch" title="Ergebnis muss auch bei ±5 °C funktionieren"><input type="checkbox" id="g-robust"> auch bei ±5 °C prüfen</label>
+        </div>
+        <div class="ad-sec">
+          <h3>Modus</h3>
+          <div class="seg full" id="g-mode" role="group" aria-label="Modus"><button data-v="design">Neue Vorschläge</button><button data-v="setup">Mein Setup verbessern</button></div>
+          <div id="g-design-only">
+            <p class="note">Probiert jede Lehrbuch-Anordnung in allen sinnvollen Varianten, lässt sie in Runden mit gleichem Budget gegeneinander antreten und verfeinert die Finalisten – am Ende auch über die Regeln hinaus („Freiform“).</p>
+            <div class="row-f">
+              <div class="seg" id="g-effort" role="group" aria-label="Suchtiefe"><button data-v="fast">Schnell</button><button data-v="normal">Normal</button><button data-v="thorough">Gründlich</button></div>
+              <span class="seedgrp"><label class="lbl inline seedf" title="Gleicher Startwert = gleiches Ergebnis">Start <input type="number" id="g-seed" min="1" max="99999" step="1"></label><button class="btn icon small" id="g-reseed" title="Neuer Startwert: andere Varianten ausprobieren" aria-label="Neu würfeln"><svg><use href="#i-dice"/></svg></button></span>
+            </div>
+            <details class="famsel" id="g-fams-wrap"><summary>Topologien <span class="dim" id="g-fams-n"></span></summary><div class="chips" id="g-fams"></div></details>
+          </div>
+          <div id="g-setup-only" hidden>
+            <p class="note">Positionen bleiben, Delay / Gain / Polarität pro Kanal werden optimiert. Fixierte Boxen (L) bewegen sich nie.</p>
+            <label class="switch"><input type="checkbox" id="g-move"> Stacks dürfen sich bis 1,5 m bewegen</label>
+          </div>
+          <label class="switch" title="Der Plan zeigt immer das aktuell beste Ergebnis"><input type="checkbox" id="g-preview"> Live-Vorschau auf dem Plan</label>
+        </div>
+        <div class="ad-sec" id="lv-out">
+          <div id="lv-msg"></div>
+          <div class="lv-status"><span class="led" id="lv-led"></span><div class="lv-stat" id="lv-stat"><span>bereit</span></div></div>
+          <div class="note" id="lv-phase"></div>
+          <canvas id="lv-spark" class="spark"></canvas>
+          <div id="lv-best" class="lv-best"></div>
+          <div class="res-list" id="lv-results"></div>
+          <details class="proto" id="lv-proto-wrap" hidden><summary>Protokoll <span class="dim" id="lv-proto-n"></span></summary><div id="lv-proto"></div></details>
+        </div>
+        <div class="ad-run"><button class="btn primary block" id="lv-run"><svg><use href="#i-play"/></svg><span>Optimierer starten</span></button></div>
+      </div>
+
+      <div class="pane-bd" id="left-zones" hidden>
+        <div class="ad-sec">
+          <h3>Flächenart</h3>
+          <div class="kinds" id="z-kinds"></div>
+          <p class="note" id="z-kind-tip"></p>
+          <p class="note">Werkzeuge links am Plan: Rechteck (R), Polygon (G), Kreis (C), Fächer (F), Pinsel (B), Radierer (X), Messen (M).</p>
+          <label class="lbl">Pinselradius <span class="mono" id="z-brush-v">1,5 m</span><input type="range" id="z-brush" min="0.5" max="10" step="0.5"></label>
+        </div>
+        <div class="ad-sec" id="z-walls-sec">
+          <h3>Wände &amp; Raum <span class="badge-studio">Studio</span></h3>
+          <div id="z-walls"></div>
+        </div>
+        <div class="ad-sec" id="z-plan-sec">
+          <h3>Hallenplan <span class="badge-studio">Studio</span></h3>
+          <div id="z-plan"></div>
+        </div>
+        <div class="ad-sec">
+          <h3>Szenario als Startpunkt</h3>
+          <div class="chips" id="z-scen"></div>
+          <p class="note">Ersetzt alle Zonen und setzt typisches Material. Danach frei weiterzeichnen.</p>
+        </div>
+        <div class="ad-sec">
+          <h3>Zonen</h3>
+          <div class="zs-row" id="z-sum"></div>
+          <div class="zlist" id="z-list"></div>
+          <div class="zedit" id="z-edit" hidden></div>
+          <button class="btn small" id="z-clear">Alle Zonen löschen</button>
+        </div>
+      </div>
+
+      <div class="pane-bd" id="left-tpl" hidden>
+        <div id="tpl-list"></div>
+        <div id="tpl-form-wrap" style="margin-top:14px"></div>
+      </div>
+    </section>
+
+    <section class="pane plan" aria-label="Draufsicht">
+      <div class="plan-wrap" id="plan-wrap">
+        <canvas id="plan" aria-label="Draufsicht mit Schallpegelkarte"></canvas>
+        <div class="tools" id="tools" role="toolbar" aria-label="Werkzeuge"></div>
+        <div class="ovl ovl-tl">
+          <div class="bar">
+            <button class="btn icon" id="p-fit" title="Ansicht einpassen (0)" aria-label="Ansicht einpassen"><svg><use href="#i-fit"/></svg></button>
+            <button class="btn icon" id="p-zin" title="Hineinzoomen (+)" aria-label="Hineinzoomen"><svg><use href="#i-plus"/></svg></button>
+            <button class="btn icon" id="p-zout" title="Herauszoomen (−)" aria-label="Herauszoomen"><svg><use href="#i-minus"/></svg></button>
+            <button class="btn icon on" id="p-zones" title="Zonen ein/aus" aria-label="Zonen ein/aus"><svg><use href="#i-zone"/></svg></button>
+            <button class="btn icon on" id="p-cont" title="3-dB-Linien ein/aus" aria-label="Höhenlinien ein/aus"><svg><use href="#i-cont"/></svg></button>
+            <span class="bsep"></span>
+            <div class="seg" id="p-mode" role="group" aria-label="Kartenmodus"><button data-v="spl" title="Echter Pegel inkl. Entfernung">SPL</button><button data-v="norm" title="Entfernung herausgerechnet: zeigt die Richtwirkung">Richtwirkung</button></div>
+          </div>
+          <div class="toolhint" id="toolhint"></div>
+        </div>
+        <div class="ovl ovl-tr" id="selbar" hidden>
+          <div class="bar">
+            <span class="selbar" id="sel-info"></span>
+            <span id="sel-box">
+              <button class="btn icon" id="sel-rot" title="180° drehen (T)" aria-label="Drehen"><svg><use href="#i-rot"/></svg></button>
+              <button class="btn icon" id="sel-pol" title="Polarität umkehren (I)" aria-label="Polarität"><svg><use href="#i-pol"/></svg></button>
+              <button class="btn icon" id="sel-pin" title="Fixieren (L)" aria-label="Fixieren"><svg><use href="#i-pin"/></svg></button>
+              <button class="btn icon" id="sel-dup" title="Duplizieren (Strg+D)" aria-label="Duplizieren"><svg><use href="#i-dup"/></svg></button>
+              <button class="btn icon" id="sel-del" title="Löschen (Entf)" aria-label="Löschen"><svg><use href="#i-del"/></svg></button>
+            </span>
+            <span id="sel-zone" hidden>
+              <span id="sel-zone-kinds"></span>
+              <button class="btn icon" id="sel-zdel" title="Zone löschen (Entf)" aria-label="Zone löschen"><svg><use href="#i-del"/></svg></button>
+            </span>
+            <span id="sel-wall" hidden>
+              <select id="sel-wall-mat" aria-label="Wandmaterial"></select>
+              <button class="btn icon" id="sel-wdel" title="Wand löschen (Entf)" aria-label="Wand löschen"><svg><use href="#i-del"/></svg></button>
+            </span>
+          </div>
+        </div>
+        <div class="legend"><canvas id="legend"></canvas></div>
+        <div class="ovl ovl-bl">
+          <div class="bar freqctl">
+            <label for="p-freq">Freq</label>
+            <input type="range" id="p-freq" min="0" max="1000" step="1">
+            <span class="num" id="p-freq-v">63 Hz</span>
+            <button class="btn small" id="p-band" title="Energie-Mittel über das ganze Band">Band</button>
+          </div>
+        </div>
+        <div class="ctx" id="ctx" hidden></div>
+        <div class="tooltip" id="tip" hidden></div>
+      </div>
+      <div class="plan-ft">
+        <span id="plan-legend" class="plan-legend"></span>
+        <span id="plan-stat" class="mono" style="margin-left:auto"></span>
+      </div>
+    </section>
+
+    <section class="pane ana" aria-label="Analyse">
+      <div class="pane-hd"><h2>Analyse</h2><span class="note" id="ana-band" style="margin-left:auto"></span></div>
+      <div class="kpis" id="kpis"></div>
+      <div class="ana-wrap">
+        <div class="ana-tabs"><div class="seg full" id="ana-tab" role="group" aria-label="Diagramm">
+          <button data-v="polar">Polar</button><button data-v="dmap">Winkelkarte</button><button data-v="freq">Frequenzgang</button>
+        </div></div>
+        <div class="ana-body">
+          <div class="ana-cv"><canvas id="ana"></canvas></div>
+          <div class="fchips" id="fchips"></div>
+          <div class="ana-note" id="ana-note"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="pane tables" aria-label="Boxen und DSP">
+    <div class="pane-hd tbl-hd">
+      <div class="seg" id="tbl-tab" role="group" aria-label="Tabelle"><button data-v="boxes">Boxen</button><button data-v="chans">DSP-Kanäle</button></div>
+      <span class="note" id="tbl-note"></span>
+      <span class="tbl-act">
+        <button class="btn small" id="t-assign" title="Boxen mit gleichen Einstellungen bekommen denselben Kanal">Kanäle zuordnen</button>
+        <button class="btn small" id="t-zero" title="Kleinstes Delay auf 0 ms setzen">Delays nullen</button>
+        <button class="btn small" id="t-clear">Alle Boxen löschen</button>
+      </span>
+    </div>
+    <div class="tbl-wrap" id="tbl"></div>
+  </section>
+</main>
+
+<!-- ======================= CALCULATORS ======================= -->
+<main class="page" id="page-calc" hidden>
+  <div class="page-h"><h1>Rechner</h1><p>Schnelle Werte für den Aufbau – Temperatur und Luftfeuchte wirken auf alle Rechner.</p></div>
+  <div class="cards">
+    <article class="card">
+      <h2>Wellenlänge &amp; Abstände<small>λ = c / f</small></h2>
+      <div class="row2">
+        <div class="field"><label for="c1-f">Frequenz</label><span class="iu"><input type="number" id="c1-f" value="80" min="10" max="2000" step="1"><span class="unit">Hz</span></span></div>
+        <div class="field"><label for="c1-t">Temperatur</label><span class="iu"><input type="number" id="c1-t" value="20" min="-20" max="45" step="1"><span class="unit">°C</span></span></div>
+      </div>
+      <div class="outs" id="c1-out"></div>
+    </article>
+    <article class="card">
+      <h2>Laufzeit &amp; Top/Sub-Delay<small>Δt = Δd / c</small></h2>
+      <div class="row2">
+        <div class="field"><label for="c2-d">Strecke</label><span class="iu"><input type="number" id="c2-d" value="1" min="0" max="500" step="0.01"><span class="unit">m</span></span></div>
+        <div class="field"><label for="c2-ms">Zeit</label><span class="iu"><input type="number" id="c2-ms" value="2.9" min="0" max="2000" step="0.01"><span class="unit">ms</span></span></div>
+      </div>
+      <div class="note">Hörplatz-Abstand zu Top und Sub (z. B. Sub vor der Bühne, Top auf der Bühne):</div>
+      <div class="row2">
+        <div class="field"><label for="c2-top">zum Top</label><span class="iu"><input type="number" id="c2-top" value="22" min="0" max="500" step="0.1"><span class="unit">m</span></span></div>
+        <div class="field"><label for="c2-sub">zum Sub</label><span class="iu"><input type="number" id="c2-sub" value="20.5" min="0" max="500" step="0.1"><span class="unit">m</span></span></div>
+      </div>
+      <div class="outs" id="c2-out"></div>
+    </article>
+    <article class="card">
+      <h2>Pegel &amp; Entfernung<small>gekoppelt +20·log n, Abstand −20·log(d₂/d₁)</small></h2>
+      <div class="row2">
+        <div class="field"><label for="c3-spl">SPL je Box @ 1 m</label><span class="iu"><input type="number" id="c3-spl" value="130" min="80" max="160" step="1"><span class="unit">dB</span></span></div>
+        <div class="field"><label for="c3-n">Boxen</label><span class="iu"><input type="number" id="c3-n" value="8" min="1" max="64" step="1"></span></div>
+        <div class="field"><label for="c3-d">Hörabstand</label><span class="iu"><input type="number" id="c3-d" value="30" min="1" max="1000" step="1"><span class="unit">m</span></span></div>
+      </div>
+      <div class="outs" id="c3-out"></div>
+      <div class="calc-cv"><canvas id="c3-cv"></canvas></div>
+    </article>
+    <article class="card">
+      <h2>Temperatur-Drift beim Cardioid<small>Eingemessen bei T₁, gespielt bei T₂</small></h2>
+      <div class="row2">
+        <div class="field"><label for="c4-D">Abstand vorne–hinten</label><span class="iu"><input type="number" id="c4-D" value="1.0" min="0.3" max="5" step="0.05"><span class="unit">m</span></span></div>
+        <div class="field"><label for="c4-t1">Eingemessen bei</label><span class="iu"><input type="number" id="c4-t1" value="12" min="-20" max="45" step="1"><span class="unit">°C</span></span></div>
+        <div class="field"><label for="c4-t2">Show bei</label><span class="iu"><input type="number" id="c4-t2" value="30" min="-20" max="45" step="1"><span class="unit">°C</span></span></div>
+      </div>
+      <div class="outs" id="c4-out"></div>
+      <div class="calc-cv"><canvas id="c4-cv"></canvas></div>
+    </article>
+  </div>
+</main>
+
+<!-- ======================= KNOWLEDGE ======================= -->
+<main class="page" id="page-know" hidden>
+  <div class="page-h"><h1>Wissen</h1><p>Das steckt im Auto-Design. Alle Polardiagramme sind live mit der SubGrid-Engine gerechnet (Band und Temperatur aus der Simulation).</p></div>
+  <div class="basics" id="basics"></div>
+  <div class="sec-t">Topologien</div>
+  <div class="cards" id="know-cards"></div>
+</main>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<div class="modal" id="modal" hidden><div class="modal-c" role="dialog" aria-modal="true" aria-labelledby="modal-t"><header><h2 id="modal-t"></h2><button class="btn small" id="modal-x">Schließen</button></header><div class="mb" id="modal-b"></div></div></div>
