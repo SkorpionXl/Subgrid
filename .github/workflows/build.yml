@@ -57,8 +57,8 @@ jobs:
           $ok = $true
           foreach ($ed in 'studio','lite') {
             $p = Start-Process -FilePath "build/SubGrid-$ed.exe" -ArgumentList '--selftest' -PassThru
-            if (-not $p.WaitForExit(90000)) { $p.Kill(); Write-Host "$ed: timeout"; $ok = $false; continue }
-            Write-Host "$ed exit code: $($p.ExitCode)"
+            if (-not $p.WaitForExit(90000)) { $p.Kill(); Write-Host "${ed}: timeout"; $ok = $false; continue }
+            Write-Host "${ed} exit code: $($p.ExitCode)"
             if ($p.ExitCode -ne 0) { $ok = $false }
           }
           Get-Content "$env:LOCALAPPDATA\SubGrid\subgrid.log" -Tail 40
