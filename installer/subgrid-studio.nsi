@@ -9,6 +9,9 @@ RequestExecutionLevel user
 !ifndef VERSION
   !define VERSION "2.2.0"
 !endif
+!ifndef NUMVER
+  !define NUMVER "${VERSION}.0"
+!endif
 !ifndef EXE
   !define EXE "../build/SubGrid.exe"
 !endif
@@ -23,7 +26,7 @@ OutFile "${OUT}"
 InstallDir "$LOCALAPPDATA\Programs\SubGrid Studio"
 InstallDirRegKey HKCU "Software\SubGrid\Studio" "InstallDir"
 BrandingText "${APP} ${VERSION}"
-VIProductVersion "${VERSION}.0"
+VIProductVersion "${NUMVER}"
 VIAddVersionKey /LANG=1031 "ProductName" "${APP}"
 VIAddVersionKey /LANG=1031 "FileDescription" "${APP} Setup"
 VIAddVersionKey /LANG=1031 "FileVersion" "${VERSION}"

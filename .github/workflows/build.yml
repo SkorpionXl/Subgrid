@@ -30,7 +30,9 @@ jobs:
         id: v
         shell: bash
         run: |
-          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then echo "version=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT; else echo "version=2.2.0-dev.${GITHUB_RUN_NUMBER}" >> $GITHUB_OUTPUT; fi
+          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then V="${GITHUB_REF#refs/tags/v}"; N="${V%%-*}.0"; else V="2.2.0-dev.${GITHUB_RUN_NUMBER}"; N="2.2.0.${GITHUB_RUN_NUMBER}"; fi
+          echo "version=$V" >> $GITHUB_OUTPUT
+          echo "numver=$N" >> $GITHUB_OUTPUT
 
       - name: Web build + engine test
         shell: bash
@@ -71,7 +73,7 @@ jobs:
           New-Item -ItemType Directory -Force dist | Out-Null
           Copy-Item build/SubGrid-lite.exe dist/SubGrid-Lite.exe
           Push-Location installer
-          makensis -V2 "-DVERSION=${{ steps.v.outputs.version }}" -DEXE=../build/SubGrid-studio.exe -DOUT=../dist/SubGrid-Studio-Setup.exe subgrid-studio.nsi
+          makensis -V2 "-DVERSION=${{ steps.v.outputs.version }}" "-DNUMVER=${{ steps.v.outputs.numver }}" "-DEXE=../build/SubGrid-studio.exe" "-DOUT=../dist/SubGrid-Studio-Setup.exe" subgrid-studio.nsi
           Pop-Location
 
       - uses: actions/upload-artifact@v4
