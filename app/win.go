@@ -181,7 +181,8 @@ func (a *app) runWebview() {
 	}
 	log.Printf("window created")
 	w.SetSize(1100, 700, webview2.HintMin)
-	owner = zenity.Attach(w.Window())
+	// zenity wants the HWND as uintptr – unsafe.Pointer made v2.1 panic right after the window appeared
+	owner = zenity.Attach(uintptr(w.Window()))
 	if a.selftest {
 		go func() {
 			select {
